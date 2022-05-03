@@ -14,5 +14,7 @@ def check_brackets(expression: str):
 
 
 if __name__ == "__main__":
-    assert check_brackets("[1+1]+(2*2)-{3/3}") is True
+    assert check_brackets("([1+1]+(2*2)-{3/3})") is True
     assert check_brackets("(5+[8*2)]") is False
+    assert check_brackets("((())") is False
+    assert check_brackets("([{100}[)") is False
